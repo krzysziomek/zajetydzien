@@ -5,5 +5,5 @@ import { defineConfig } from 'astro/config';
 // or https://username.github.io if the repo is <username>.github.io
 export default defineConfig({
   output: 'static',
-  site: process.env.SITE ?? 'https://example.github.io',
+  site: process.env.SITE ?? 'https://dzien.scooby.boo',
 });
