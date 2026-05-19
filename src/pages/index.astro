@@ -18,10 +18,14 @@ const today = new Date().toLocaleDateString("en-US", {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dzionek</title>
 
-    <!-- Discord renders a large inline image when width/height are present and type is website -->
+    <!-- Discord inline video embed (gifv-style, same trick as imgur) -->
+    <meta property="og:type" content="video.other" />
     <meta property="og:url" content={siteUrl} />
-    <meta property="og:image" content={gif.url} />
-    <meta property="og:image:type" content="image/gif" />
+    <meta property="og:video" content={gif.videoUrl} />
+    <meta property="og:video:secure_url" content={gif.videoUrl} />
+    <meta property="og:video:type" content="video/mp4" />
+    <meta property="og:video:width" content="1280" />
+    <meta property="og:video:height" content="720" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
@@ -91,7 +95,7 @@ const today = new Date().toLocaleDateString("en-US", {
         overflow: hidden;
       }
 
-      .gif-wrap img {
+      .gif-wrap video {
         width: 100%;
         height: 100%;
         object-fit: contain;
@@ -107,7 +111,7 @@ const today = new Date().toLocaleDateString("en-US", {
       </div>
 
       <div class="gif-wrap">
-        <img src={gif.url} alt={gif.title} loading="eager" />
+        <video src={gif.videoUrl} autoplay loop muted playsinline></video>
       </div>
     </div>
   </body>
