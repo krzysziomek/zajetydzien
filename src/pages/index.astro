@@ -20,25 +20,21 @@ const today = new Date().toLocaleDateString("en-US", {
 
     <!-- Open Graph / Discord embed -->
     <meta property="og:type" content="video.other" />
-    <meta property="og:title" content={gif.title} />
-    <meta property="og:description" content={gif.description} />
     <meta property="og:url" content={siteUrl} />
     <meta property="og:image" content={gif.url} />
     <meta property="og:image:type" content="image/gif" />
     <!-- Discord picks up og:video for animated previews -->
     <meta property="og:video" content={gif.url} />
     <meta property="og:video:type" content="image/gif" />
-    <meta property="og:video:width" content="480" />
-    <meta property="og:video:height" content="270" />
+    <meta property="og:video:width" content="1280" />
+    <meta property="og:video:height" content="720" />
 
     <!-- Twitter / X card (also read by some Discord fallback paths) -->
     <meta name="twitter:card" content="player" />
-    <meta name="twitter:title" content={gif.title} />
-    <meta name="twitter:description" content={gif.description} />
     <meta name="twitter:image" content={gif.url} />
     <meta name="twitter:player" content={gif.url} />
-    <meta name="twitter:player:width" content="480" />
-    <meta name="twitter:player:height" content="270" />
+    <meta name="twitter:player:width" content="1280" />
+    <meta name="twitter:player:height" content="720" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
@@ -167,22 +163,13 @@ const today = new Date().toLocaleDateString("en-US", {
   <body>
     <div class="card">
       <div class="card-header">
-        <span class="badge">Daily GIF</span>
         <span class="date">{today}</span>
       </div>
 
       <div class="gif-wrap">
         <img src={gif.url} alt={gif.title} loading="eager" />
       </div>
-
-      <div class="card-body">
-        <p class="card-title">{gif.title}</p>
-        <p class="card-desc">{gif.description}</p>
-      </div>
     </div>
 
-    <p class="footer">
-      New GIF every day &mdash; <a href={siteUrl}>share the link on Discord</a>
-    </p>
   </body>
 </html>
