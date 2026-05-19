@@ -25,7 +25,6 @@ const today = new Date().toLocaleDateString("en-US", {
     <meta property="og:image:secure_url" content={gif.url} />
     <meta property="og:video" content={gif.url} />
     <meta property="og:video:secure_url" content={gif.url} />
-    <meta property="og:video:type" content="video/mp4" />
     <meta property="og:video:width" content="1280" />
     <meta property="og:video:height" content="720" />
 
@@ -108,6 +107,6 @@ const today = new Date().toLocaleDateString("en-US", {
 
   <body>
         <span class="date">{today}</span>
-        <video src={gif.videoUrl} autoplay loop playsinline></video>
+        <video src={gif.url} autoplay loop playsinline></video>
   </body>
 </html>
