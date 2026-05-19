@@ -3,52 +3,36 @@
 export interface GifEntry {
   url: string;
   videoUrl: string;
-  title: string;
-  description: string;
 }
 
 export const gifs: GifEntry[] = [
   {
     url: "https://dzien.scooby.boo/fajniedzialek.gif",
     videoUrl: "https://dzien.scooby.boo/fajniedzialek.mp4",
-    title: "Fajniedziałek",
-    description: "A cat furiously typing on a keyboard.",
   },
   {
     url: "https://dzien.scooby.boo/fajniedzialek.gif",
     videoUrl: "https://dzien.scooby.boo/fajniedzialek.mp4",
-    title: "Zajewtorek",
-    description: "Explaining a bug to a rubber duck.",
   },
   {
     url: "https://dzien.scooby.boo/fajniedzialek.gif",
     videoUrl: "https://dzien.scooby.boo/fajniedzialek.mp4",
-    title: "Środa",
-    description: "dzień loda",
   },
   {
     url: "https://dzien.scooby.boo/fajniedzialek.gif",
     videoUrl: "https://dzien.scooby.boo/fajniedzialek.mp4",
-    title: "Czwarteczek",
-    description: "Mind = blown.",
   },
   {
     url: "https://dzien.scooby.boo/fajniedzialek.gif",
     videoUrl: "https://dzien.scooby.boo/fajniedzialek.mp4",
-    title: "Piąteczek",
-    description: "Deal with it sunglasses drop.",
   },
   {
     url: "https://dzien.scooby.boo/fajniedzialek.gif",
     videoUrl: "https://dzien.scooby.boo/fajniedzialek.mp4",
-    title: "Sobota",
-    description: "Everything is fine. Totally fine.",
   },
   {
     url: "https://dzien.scooby.boo/fajniedzialek.gif",
     videoUrl: "https://dzien.scooby.boo/fajniedzialek.mp4",
-    title: "Niedziela",
-    description: "It is finally the weekend!",
   },
 ];
 
