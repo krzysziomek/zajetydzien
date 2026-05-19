@@ -2,7 +2,7 @@
 import { getTodaysGif } from "../data/gifs";
 
 const gif = getTodaysGif();
-const siteUrl = import.meta.env.SITE ?? "https://example.github.io";
+const siteUrl = import.meta.env.SITE ?? "https://dzien.scooby.boo";
 const today = new Date().toLocaleDateString("en-US", {
   weekday: "long",
   year: "numeric",
@@ -18,23 +18,13 @@ const today = new Date().toLocaleDateString("en-US", {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{gif.title}</title>
 
-    <!-- Open Graph / Discord embed -->
-    <meta property="og:type" content="video.other" />
+    <!-- Discord: og:image pointing to a .gif renders inline as animated image -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={gif.title} />
+    <meta property="og:description" content={gif.description} />
     <meta property="og:url" content={siteUrl} />
     <meta property="og:image" content={gif.url} />
     <meta property="og:image:type" content="image/gif" />
-    <!-- Discord picks up og:video for animated previews -->
-    <meta property="og:video" content={gif.url} />
-    <meta property="og:video:type" content="image/gif" />
-    <meta property="og:video:width" content="1280" />
-    <meta property="og:video:height" content="720" />
-
-    <!-- Twitter / X card (also read by some Discord fallback paths) -->
-    <meta name="twitter:card" content="player" />
-    <meta name="twitter:image" content={gif.url} />
-    <meta name="twitter:player" content={gif.url} />
-    <meta name="twitter:player:width" content="1280" />
-    <meta name="twitter:player:height" content="720" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
@@ -46,7 +36,6 @@ const today = new Date().toLocaleDateString("en-US", {
         --text-primary: #f0f2f7;
         --text-secondary: #8b93a9;
         --accent: #3b82f6;
-        --accent-dim: #1d4ed8;
         font-size: 16px;
       }
 
@@ -90,17 +79,6 @@ const today = new Date().toLocaleDateString("en-US", {
         gap: 12px;
       }
 
-      .badge {
-        background: var(--accent);
-        color: #fff;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        padding: 3px 10px;
-        border-radius: 999px;
-      }
-
       .date {
         font-size: 0.82rem;
         color: var(--text-secondary);
@@ -122,41 +100,6 @@ const today = new Date().toLocaleDateString("en-US", {
         object-fit: contain;
         display: block;
       }
-
-      .card-body {
-        padding: 20px 24px 24px;
-      }
-
-      .card-title {
-        font-size: 1.15rem;
-        font-weight: 600;
-        line-height: 1.3;
-        margin-bottom: 6px;
-        color: var(--text-primary);
-      }
-
-      .card-desc {
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        line-height: 1.6;
-      }
-
-      .footer {
-        margin-top: 32px;
-        font-size: 0.78rem;
-        color: var(--text-secondary);
-        text-align: center;
-        line-height: 1.6;
-      }
-
-      .footer a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-
-      .footer a:hover {
-        text-decoration: underline;
-      }
     </style>
   </head>
 
@@ -170,6 +113,5 @@ const today = new Date().toLocaleDateString("en-US", {
         <img src={gif.url} alt={gif.title} loading="eager" />
       </div>
     </div>
-
   </body>
 </html>
