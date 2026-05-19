@@ -19,8 +19,9 @@ const today = new Date().toLocaleDateString("en-US", {
     <title>Dzionek</title>
 
     <!-- Discord inline video embed (gifv-style, same trick as imgur) -->
-    <meta property="og:type" content="video.other" />
     <meta property="og:url" content={siteUrl} />
+    <meta property="og:image" content={gif.url} />
+    <meta property="og:image:secure_url" content={gif.url} />
     <meta property="og:video" content={gif.url} />
     <meta property="og:video:secure_url" content={gif.url} />
     <meta property="og:video:type" content="video/mp4" />
