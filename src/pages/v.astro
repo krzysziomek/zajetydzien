@@ -112,22 +112,13 @@ const today = new Date().toLocaleDateString("en-US", {
   </head>
 
   <body>
-    <div class="card">
-      <div class="card-header">
-        <span class="date">{today}</span>
-      </div>
-
-      <div class="video-wrap">
         <video
           src={gif.videoUrl}
           poster={gif.url}
           autoplay
           loop
-          muted
           playsinline
           controls
         ></video>
-      </div>
-    </div>
   </body>
 </html>
