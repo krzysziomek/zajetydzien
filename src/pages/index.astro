@@ -16,12 +16,9 @@ const today = new Date().toLocaleDateString("en-US", {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{gif.title}</title>
+    <title>Dzionek</title>
 
-    <!-- Discord: og:image pointing to a .gif renders inline as animated image -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={gif.title} />
-    <meta property="og:description" content={gif.description} />
+    <!-- Discord renders a large inline image when width/height are present and type is website -->
     <meta property="og:url" content={siteUrl} />
     <meta property="og:image" content={gif.url} />
     <meta property="og:image:type" content="image/gif" />
