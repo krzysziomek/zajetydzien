@@ -8,38 +8,38 @@ export interface GifEntry {
 
 export const gifs: GifEntry[] = [
   {
-    url: "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",
-    title: "Day 1 – Cat keyboard",
+    url: "https://dzien.scooby.boo/fajniedzialek.gif",
+    title: "Fajniedziałek",
     description: "A cat furiously typing on a keyboard.",
   },
   {
-    url: "https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif",
-    title: "Day 2 – Rubber duck debug",
+    url: "https://dzien.scooby.boo/fajniedzialek.gif",
+    title: "Zajewtorek",
     description: "Explaining a bug to a rubber duck.",
   },
   {
-    url: "https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif",
-    title: "Day 3 – Typing fast",
-    description: "Fingers flying across the keyboard.",
+    url: "https://dzien.scooby.boo/fajniedzialek.gif",
+    title: "Środa",
+    description: "dzień loda",
   },
   {
-    url: "https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif",
-    title: "Day 4 – Mind blown",
+    url: "https://dzien.scooby.boo/fajniedzialek.gif",
+    title: "Czwarteczek",
     description: "Mind = blown.",
   },
   {
-    url: "https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif",
-    title: "Day 5 – Deal with it",
+    url: "https://dzien.scooby.boo/fajniedzialek.gif",
+    title: "Piąteczek",
     description: "Deal with it sunglasses drop.",
   },
   {
-    url: "https://media.giphy.com/media/xT9IgG50Lg7rusT1SC/giphy.gif",
-    title: "Day 6 – This is fine",
+    url: "https://dzien.scooby.boo/fajniedzialek.gif",
+    title: "Sobota",
     description: "Everything is fine. Totally fine.",
   },
   {
-    url: "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif",
-    title: "Day 7 – Weekend",
+    url: "https://dzien.scooby.boo/fajniedzialek.gif",
+    title: "Niedziela",
     description: "It is finally the weekend!",
   },
 ];
