@@ -23,8 +23,14 @@ export const GET: APIRoute = async () => {
     return new Response(fileBuffer, {
       status: 200,
       headers: {
+        // 1. Force the content type to be exactly an image
         'Content-Type': 'image/gif',
-        'Content-Disposition': `inline; filename="dzien.gif"`,
+
+        // 2. Wrap the filename in clean, escaped double quotes
+        'Content-Disposition': 'attachment; filename="dzien.gif"',
+
+        // 3. Prevent browsers/proxies from sniffing the content and changing it to octet-stream
+        'X-Content-Type-Options': 'nosniff',
       },
     });
     
