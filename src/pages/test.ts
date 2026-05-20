@@ -24,7 +24,7 @@ export const GET: APIRoute = async () => {
       status: 200,
       headers: {
         'Content-Type': 'image/gif',
-        'Content-Disposition': `attachment; filename="dzien.gif"`,
+        'Content-Disposition': `inline; filename="dzien.gif"`,
       },
     });
     
