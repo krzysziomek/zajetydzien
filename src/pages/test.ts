@@ -1,6 +1,8 @@
 import type { APIRoute } from 'astro';
 import { getTodaysGif } from '../data/gifs';
 
+export const prerender = false;
+
 export const GET: APIRoute = async () => {
   // 1. Get the dynamic GIF object
   const gif = getTodaysGif();
