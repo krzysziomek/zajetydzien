@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
-  output: 'server',
+  output: 'hybrid',
   adapter: cloudflare(),
-  site: process.env.SITE ?? 'https://dzien.scooby.boo',
+  site: 'https://dzien.scooby.boo',
 });
