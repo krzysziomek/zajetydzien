@@ -7,7 +7,7 @@ export const GET: APIRoute = async () => {
   const gif = getTodaysGif();
   const filename = gif.gifFile;
   const filePath = path.resolve('public', filename);
-  const fileBuffer = fs.readFileSync(filePath);
+  const fileBuffer = fs.readFileSync('../public/test/gif');
 
   return new Response(fileBuffer, {
     status: 200,
