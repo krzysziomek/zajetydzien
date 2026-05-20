@@ -7,15 +7,14 @@ const siteUrl = import.meta.env.SITE ?? "https://dzien.scooby.boo";
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:type" content="video.other" />
-    <meta property="og:video" content={gif.url} />
-    <meta property="og:video:secure_url" content={gif.url} />
-    <meta property="og:video:type" content="video/mp4" />
-  </head>
-
   <body>
+  <video
+          src={gif.url}
+          poster={gif.url}
+          autoplay
+          loop
+          playsinline
+          controls
+        ></video>
   </body>
 </html>
