@@ -3,12 +3,6 @@ import { getTodaysGif } from "../data/gifs";
 
 const gif = getTodaysGif();
 const siteUrl = import.meta.env.SITE ?? "https://dzien.scooby.boo";
-const today = new Date().toLocaleDateString("en-US", {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
 ---
 
 <!doctype html>
