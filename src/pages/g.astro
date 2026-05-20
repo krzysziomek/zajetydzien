@@ -7,7 +7,6 @@ const siteUrl = import.meta.env.SITE ?? "https://dzien.scooby.boo";
 
 <!doctype html>
 <html lang="en">
-  <body>
   <script>
   app.get('/test', (req, res) => {
     const userAgent = req.headers['user-agent'] || '';
@@ -24,5 +23,4 @@ const siteUrl = import.meta.env.SITE ?? "https://dzien.scooby.boo";
     // Normal browser users see your HTML page instead
     res.send('<html><body><h1>Welcome to my website!</h1></body></html>');
 });</script>
-  </body>
 </html>
