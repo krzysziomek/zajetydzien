@@ -1,4 +1,4 @@
-import { cpSync, renameSync, existsSync } from 'fs';
+import { cpSync, renameSync, rmSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -15,4 +15,11 @@ const workerPath = join(clientDir, '_worker.js');
 if (existsSync(entryPath)) {
   renameSync(entryPath, workerPath);
   console.log('Created dist/client/_worker.js');
+}
+
+// Remove the Workers-format deploy config that would confuse Cloudflare Pages
+const deployConfig = join(__dirname, '.wrangler/deploy/config.json');
+if (existsSync(deployConfig)) {
+  rmSync(deployConfig);
+  console.log('Removed .wrangler/deploy/config.json');
 }
