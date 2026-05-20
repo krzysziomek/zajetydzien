@@ -1,20 +1,18 @@
 import type { APIRoute } from 'astro';
 import { getTodaysGif } from '../data/gifs';
+// @ts-ignore
+import { env } from 'cloudflare:workers';
 
 export const prerender = false;
 
-export const GET: APIRoute = async ({ locals }) => {
+export const GET: APIRoute = async () => {
   const gif = getTodaysGif();
 
   try {
     let fileBuffer: ArrayBuffer;
 
     if (gif.localFile) {
-      const runtime = (locals as Record<string, unknown>).runtime as { env?: { ASSETS?: { fetch: (req: Request) => Promise<Response> } } } | undefined;
-      const assets = runtime?.env?.ASSETS;
-      if (!assets) {
-        return new Response('ASSETS binding not available', { status: 500 });
-      }
+      const assets = (env as { ASSETS: { fetch: (req: Request) => Promise<Response> } }).ASSETS;
       const assetResponse = await assets.fetch(new Request(`https://dzien.scooby.boo/${gif.localFile}`));
       if (!assetResponse.ok) {
         return new Response('Failed to fetch asset', { status: assetResponse.status });
@@ -37,6 +35,6 @@ export const GET: APIRoute = async ({ locals }) => {
       },
     });
   } catch (error) {
-    return new Response('Internal Server Error', { status: 500 });
+    return new Response(`Error: ${error}`, { status: 500 });
   }
 };
