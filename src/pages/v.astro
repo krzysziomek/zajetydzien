@@ -26,11 +26,7 @@ const today = new Date().toLocaleDateString("en-US", {
       The og:image is used as the poster/thumbnail shown before playback.
     -->
     <meta property="og:type" content="video.other" />
-    <meta property="og:title" content={gif.title} />
-    <meta property="og:description" content={gif.description} />
     <meta property="og:url" content={`${siteUrl}/v`} />
-    <meta property="og:image" content={gif.url} />
-    <meta property="og:image:type" content="image/gif" />
     <meta property="og:video" content={gif.videoUrl} />
     <meta property="og:video:secure_url" content={gif.videoUrl} />
     <meta property="og:video:type" content="video/mp4" />
