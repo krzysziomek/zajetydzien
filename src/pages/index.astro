@@ -18,7 +18,6 @@ const today = new Date().toLocaleDateString("en-US", {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dzionek</title>
 
-    <!-- Discord inline video embed (gifv-style, same trick as imgur) -->
     <meta property="og:type" content="image/gif" />
     <meta property="og:url" content={siteUrl} />
     <meta property="og:image" content={gif.url} />
@@ -107,6 +106,6 @@ const today = new Date().toLocaleDateString("en-US", {
 
   <body>
         <span class="date">{today}</span>
-        <video src={gif.url} autoplay loop playsinline></video>
+        <video src={gif.url} autoplay loop playsinline controls></video>
   </body>
 </html>
