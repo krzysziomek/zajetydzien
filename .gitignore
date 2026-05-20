@@ -3,6 +3,10 @@ dist/
 
 # generated types
 .astro/
+.idea/
+.wrangler/
+.codesandbox/
+.vscode/
 
 # dependencies
 node_modules/
@@ -19,6 +23,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-# jetbrains setting folder
-.idea/
