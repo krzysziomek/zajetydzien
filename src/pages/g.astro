@@ -7,20 +7,5 @@ const siteUrl = import.meta.env.SITE ?? "https://dzien.scooby.boo";
 
 <!doctype html>
 <html lang="en">
-  <script>
-  app.get('/test', (req, res) => {
-    const userAgent = req.headers['user-agent'] || '';
 
-    // Check if the request is coming from Discord's scraper
-    if (userAgent.includes('Discordbot')) {
-        // Fetch or read your raw GIF and pipe it directly 
-        res.setHeader('Content-Type', 'image/gif');
-        
-        // Example: Redirecting directly to the asset, or use res.sendFile()
-        return res.redirect('https://i.imgur.com/1TlBrfZ.gif');
-    }
-
-    // Normal browser users see your HTML page instead
-    res.send('<html><body><h1>Welcome to my website!</h1></body></html>');
-});</script>
 </html>
