@@ -1,6 +1,5 @@
 import type { APIRoute } from 'astro';
 import { getTodaysGif } from '../data/gifs';
-// @ts-ignore
 import { env } from 'cloudflare:workers';
 
 export const prerender = false;
